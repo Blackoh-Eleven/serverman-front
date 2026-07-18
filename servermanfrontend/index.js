@@ -106,25 +106,7 @@ document.getElementById("signinbtn").addEventListener("click", function () {
            const tok = localStorage.getItem("token")
            console.log(tok)
             alert("Login successful!")
-
-                    fetch("https://serverman-rh0k.onrender.com/profile", {
-                method: "GET",
-                headers: {
-                    Authorization: `Bearer ${tok}`
-                }
-            })
-            .then(res => res.json())
-            .then(profile => {
-                console.log("Profile:", profile);
-
-                    localStorage.setItem("profile", JSON.stringify(profile));
-                   window.location.href = "profile.html";
-
-    document.getElementById("username").textContent = profileName;
-            })
-            .catch(err => console.error(err));
-
-
+            window.location.href = "profile.html";
         } else {
             alert(data.message);
         }
