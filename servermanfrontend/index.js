@@ -117,7 +117,8 @@ document.getElementById("signinbtn").addEventListener("click", function () {
             .then(profile => {
                 console.log("Profile:", profile);
 
-                window.location.href = "profile.html";
+                    localStorage.setItem("profile", JSON.stringify(profile));
+                   window.location.href = "profile.html";
 
     document.getElementById("username").textContent = profileName;
             })
