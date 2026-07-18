@@ -99,9 +99,7 @@ document.getElementById("signinbtn").addEventListener("click", function () {
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data);
-// console.log(authHeader);
-// console.log(token);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+        console.log(data);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
         if (data.token) {
             console.log('he dey',data.token)
            localStorage.setItem("token", data.token);
