@@ -57,7 +57,7 @@ document.getElementById("signupbtn").addEventListener('click' ,function(){
     }
 
 
-    fetch("http://localhost:3000/signup",{
+    fetch("https://serverman-rh0k.onrender.com/signup",{
         method: "POST",
         headers:{
             "Content-Type" : "application/json"
@@ -90,7 +90,7 @@ document.getElementById("signinbtn").addEventListener("click", function () {
         password: passWordValue
     };
 
-    fetch("http://localhost:3000/signin", {
+    fetch("https://serverman-rh0k.onrender.com/signin", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -100,7 +100,8 @@ document.getElementById("signinbtn").addEventListener("click", function () {
     .then(res => res.json())
     .then(data => {
         console.log(data);
-
+console.log(authHeader);
+console.log(token);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
         if (data.token) {
             console.log('he dey',data.token)
            localStorage.setItem("token", data.token);
@@ -108,7 +109,7 @@ document.getElementById("signinbtn").addEventListener("click", function () {
            console.log(tok)
             alert("Login successful!")
 
-                    fetch("http://localhost:3000/profile", {
+                    fetch("https://serverman-rh0k.onrender.com/profile", {
                 method: "GET",
                 headers: {
                     Authorization: `Bearer ${tok}`
