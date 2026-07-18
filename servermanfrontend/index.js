@@ -116,6 +116,10 @@ document.getElementById("signinbtn").addEventListener("click", function () {
             .then(res => res.json())
             .then(profile => {
                 console.log("Profile:", profile);
+
+                window.location.href = "profile.html";
+
+    document.getElementById("username").textContent = profileName;
             })
             .catch(err => console.error(err));
 
@@ -127,13 +131,5 @@ document.getElementById("signinbtn").addEventListener("click", function () {
     .catch(err => console.error(err));
 });
 
-    // const token = localStorage.getItem('token');
 
-
-    //    fetch("http://localhost:3000/profile",{
-    //     method: "GET",
-    //     headers:{
-    //         authorization: `Bearer ${token}`
-    //     },
-    // })
 
