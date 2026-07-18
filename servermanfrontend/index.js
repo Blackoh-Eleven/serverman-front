@@ -100,7 +100,7 @@ document.getElementById("signinbtn").addEventListener("click", function () {
     .then(res => res.json())
     .then(data => {
         console.log(data);
-console.log(authHeader);
+// console.log(authHeader);
 console.log(token);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
         if (data.token) {
             console.log('he dey',data.token)
