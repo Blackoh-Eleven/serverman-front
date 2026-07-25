@@ -7,7 +7,7 @@ fetch("https://serverman-rh0k.onrender.com/profile", {
 })
 .then(res => res.json())
 .then(profile => {
-    document.getElementById("usernamebox").textContent = profile.profileName;
+    document.getElementById("boldusername").textContent = profile.profileName;
     document.getElementById("emailbox").textContent = profile.email;
 });
 
