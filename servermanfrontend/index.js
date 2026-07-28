@@ -69,7 +69,11 @@ document.getElementById("signupbtn").addEventListener('click' , async function()
 
     const data = await res.json()
     console.log(data)
-    messagebox.textContent = data.message;
+
+    setTimeout(()=>{
+        messagebox.textContent = data.message;
+    },3000)
+    
 })
 
 
