@@ -72,6 +72,7 @@ document.getElementById("signupbtn").addEventListener('click' , async function()
 
     setTimeout(()=>{
         messagebox.textContent = data.message;
+        document.querySelector(".notificationblock").style.display = 'block'
     },3000)
     
 })
