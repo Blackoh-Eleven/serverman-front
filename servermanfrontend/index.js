@@ -2,6 +2,7 @@
     let signinbtn = document.getElementById("signinbtn");
     let namefield = document.getElementById("namefield");
     let tittle = document.getElementById("tittle");
+    document.querySelector(".notificationblock").style.display = 'none'
 
 // signupbtn.onclick = function(){
 //     let userName = document.getElementById('username')
@@ -104,6 +105,8 @@ document.getElementById("signinbtn").addEventListener("click", async function ()
     const data = await res.json()
     // .then(res => res.json())
     // .then(data => {
+        
+       let messagebox =  document.getElementById('servermessage')
         console.log(data);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
         if (data.token) {
             console.log('he dey',data.token)
@@ -111,12 +114,16 @@ document.getElementById("signinbtn").addEventListener("click", async function ()
            const tok = localStorage.getItem("token")
            console.log(tok)
            document.querySelector(".loading").style.display = "none"
-            alert("Login successful!")
+            // alert("Login successful!")
+            messagebox.textContent = "Login successful!"
+            document.querySelector(".notificationblock").style.display = 'block'
             window.location.href = "profile.html";
         } else {
             document.querySelector(".loading").style.display = "none";
             document.querySelector(".login-container").style.display = "block";
-            alert(data.message);
+            messagebox.textContent = data.message
+            document.querySelector(".notificationblock").style.display = 'block'
+            // alert(data.message);
         }
     }catch(err){
             console.error(err)
