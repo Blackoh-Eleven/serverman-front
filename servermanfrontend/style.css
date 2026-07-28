@@ -111,7 +111,8 @@ form p a{
         margin-top:20px ;
         display:flex ;
         width: fit-content;
-        background:red;
+        /* background:rgb(218, 128, 128); */
+        background:linear-gradient(124deg,rgba(235, 160, 47, 0.4),rgba(176,211,180,0.7));
     }
     .notificationblock>p{
         text-align: center;

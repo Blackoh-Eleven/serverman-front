@@ -2,6 +2,7 @@
     let signinbtn = document.getElementById("signinbtn");
     let namefield = document.getElementById("namefield");
     let tittle = document.getElementById("tittle");
+    let messagebox =  document.getElementById('servermessage');
     document.querySelector(".notificationblock").style.display = 'none'
 
 // signupbtn.onclick = function(){
@@ -37,7 +38,7 @@
 
 
 
-document.getElementById("signupbtn").addEventListener('click' ,function(){
+document.getElementById("signupbtn").addEventListener('click' , async function(){
         let userName = document.getElementById('username')
     let userNameValue = userName.value;
     userName.value = ''
@@ -58,13 +59,17 @@ document.getElementById("signupbtn").addEventListener('click' ,function(){
     }
 
 
-    fetch("https://serverman-rh0k.onrender.com/signup",{
+  const res =  await fetch("https://serverman-rh0k.onrender.com/signup",{
         method: "POST",
         headers:{
             "Content-Type" : "application/json"
         },
         body:JSON.stringify(userInfo)
     })
+
+    const data = await res.json()
+    console.log(data)
+    messagebox.textContent = data.message;
 })
 
 
@@ -106,7 +111,7 @@ document.getElementById("signinbtn").addEventListener("click", async function ()
     // .then(res => res.json())
     // .then(data => {
         
-       let messagebox =  document.getElementById('servermessage')
+       
         console.log(data);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
         if (data.token) {
             console.log('he dey',data.token)
@@ -114,8 +119,7 @@ document.getElementById("signinbtn").addEventListener("click", async function ()
            const tok = localStorage.getItem("token")
            console.log(tok)
            document.querySelector(".loading").style.display = "none"
-            // alert("Login successful!")
-            messagebox.textContent = "Login successful!"
+            alert("Login successful!")
             document.querySelector(".notificationblock").style.display = 'block'
             window.location.href = "profile.html";
         } else {
