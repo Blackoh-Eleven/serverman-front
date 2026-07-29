@@ -78,17 +78,20 @@ p{
     width:100%;
     height:260px;
     padding: 0;
-        display: flex;
+    display: flex;
     flex-direction: column;
     gap: 13px;
-    /* border:1px solid black; */
 }
 
 .sect3{
     width:100%;
-    height:350px;
-    border:1px solid black;
+    height:260px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
 }
+
 
 
 .sect1 img{
@@ -213,6 +216,48 @@ gap: 0px;
 }
 
 .appearance p{
+    margin: 0;
+}
+
+
+/* third box */
+.appsec{
+    height: 75px;
+background:rgba(146, 115, 182, 0.2);
+display: flex;
+align-items: center;
+font-size: 24px;
+gap: 0px;
+}
+
+.appsec p{
+    margin: 0;
+    
+}
+
+.managedev{
+    height: 75px;
+background:rgba(146, 115, 182, 0.2);
+display: flex;
+align-items: center;
+font-size: 24px;
+gap: 0px;
+}
+
+.managedev p{
+    margin: 0;
+}
+
+.changepassword{
+    height: 75px;
+background:rgba(146, 115, 182, 0.2);
+display: flex;
+align-items: center;
+font-size: 24px;
+gap: 0px;
+}
+
+.changepassword p{
     margin: 0;
 }
 
