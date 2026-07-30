@@ -371,5 +371,91 @@ gap: 0px;
 }
 
 
+.sidebar{
+    width: 50%;
+    position: fixed;
+    height: 90vh;
+    background:rgb(185, 151, 151);
+    position: fixed;
+    top: 1%;
+    display: none;
+}
+
+.cancelline{
+    display: flex;
+    justify-content: flex-end;
+    /* background:blue; */
+    height: 20px;
+    /* width: 10px; */
+}
+
+.fa-x{
+    /* background:orange; */
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    color:red;
+}
+
+
+.prof{
+    width: 100%;
+    height: fit-content;
+    /* background:blue; */
+    padding: 2px;
+    border-bottom: 1px solid black;
+
+}
+
+
+.profilecircle{
+    width: 80px;
+    height: 80px;
+    /* background:red; */
+    border-radius:50%;
+    border: 1px solid red;
+}
+
+/* .sideactive{
+    /* display: flex; */
+    font-size: 28px;
+    display: block;
+
+} */
+
+/* .sidebarcontainer{
+    width: 40%;
+    height: 70px;
+    background:blue;
+    z-index: 9999;
+} */
+
+/* .overlay{
+    position: fixed;
+    left: 1;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 999;
+    /* display: none; */
+} */
+
+/* .overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebarcontainer{
+    z-index: 1000;
+} */
+
+
 
 }
